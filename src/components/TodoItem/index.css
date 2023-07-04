@@ -1,0 +1,54 @@
+.todo-item-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  background-color: #ffc2a0;
+  box-shadow: 3px 3px #bfbfbf;
+  padding: 10px;
+}
+
+.check-box-and-todo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.input-check-box {
+  height: 16px;
+  width: 16px;
+  margin-right: 10px;
+
+  cursor: pointer;
+}
+
+.todo {
+  font-family: 'Roboto';
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.checked {
+  text-decoration: line-through;
+  text-decoration-color: #000000;
+}
+
+.delete-btn {
+  height: 34px;
+  width: 60px;
+  background-color: #ffffff;
+  border: 0px solid;
+  color: #ffc2a0;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 6px 8px 6px;
+  border-radius: 6px;
+  margin-left: 10px;
+  cursor: pointer;
+}

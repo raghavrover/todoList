@@ -1,0 +1,38 @@
+.bg-container {
+  background-color: #ffc2a0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 30px 20px 30px;
+}
+
+.todos-card {
+  background-color: #ffffff;
+  border: 0 solid;
+  border-radius: 20px;
+  width: 95%;
+  max-width: 1000px;
+  box-shadow: 5px 5px 6px 6px #bfbfbf;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px 30px 20px;
+}
+
+.title {
+  font-family: 'Bree Serif';
+  font-size: 26px;
+  color: #ff8542;
+  font-weight: 600;
+}
+
+.todos-list {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0px;
+}
