@@ -15,7 +15,7 @@
 .check-box-and-todo {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .input-check-box {
@@ -41,6 +41,7 @@
 .delete-btn {
   height: 34px;
   width: 60px;
+  flex-shrink: 0;
   background-color: #ffffff;
   border: 0px solid;
   color: #ffc2a0;

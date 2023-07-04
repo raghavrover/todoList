@@ -28,25 +28,25 @@ const initialTodosList = [
     title: 'Order fruits on Big Basket',
     status: 'unchecked',
   },
-  {
-    id: 6,
-    title: 'Fix the production issue',
-    status: 'unchecked',
-  },
-  {
-    id: 7,
-    title: 'Confirm my slot for Saturday Night',
-    status: 'unchecked',
-  },
-  {
-    id: 8,
-    title: 'Get essentials for Sunday car wash',
-    status: 'unchecked',
-  },
 ]
 
 class SimpleTodos extends Component {
-  state = {todoList: initialTodosList}
+  state = {todoList: initialTodosList, inputTodo: ''}
+
+  getTodo = event => {
+    this.setState({inputTodo: event.target.value})
+  }
+
+  addTodo = () => {
+    const {inputTodo, todoList} = this.state
+
+    const todoObject = {
+      id: new Date(),
+      title: inputTodo,
+      status: 'unchecked',
+    }
+    this.setState({todoList: [...todoList, todoObject], inputTodo: ''})
+  }
 
   deleteTodo = id => {
     const {todoList} = this.state
@@ -72,12 +72,25 @@ class SimpleTodos extends Component {
   }
 
   render() {
-    const {todoList} = this.state
+    const {todoList, inputTodo} = this.state
 
     return (
       <div className="bg-container">
         <div className="todos-card">
           <h1 className="title">Simple Todos</h1>
+          <div className="todo-add-container">
+            <input
+              type="text"
+              className="todo-input"
+              onChange={this.getTodo}
+              value={inputTodo}
+              placeholder="What needs to be done?"
+            />
+            <button type="button" className="add-btn" onClick={this.addTodo}>
+              Add
+            </button>
+          </div>
+          <h1 className="todo-lis-title">Todo List</h1>
           <ul className="todos-list">
             {todoList.map(eachTodo => (
               <TodoItem
